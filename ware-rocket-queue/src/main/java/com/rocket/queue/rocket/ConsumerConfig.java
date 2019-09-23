@@ -44,6 +44,8 @@ public class ConsumerConfig {
                 String[] topicTag = topicTags.split("~");
                 consumer.subscribe(topicTag[0],topicTag[1]);
             }
+            //
+            consumer.subscribe("rocketTopic","rocketTag");
             consumer.start();
         }catch (MQClientException e){
             e.printStackTrace();

@@ -21,7 +21,7 @@ rocketmq:
     # 服务地址
     namesrvAddr: 127.0.0.1:9876
     # 接收该 Topic 下所有 Tag
-    topics: CicadaTopic~*;
+    topics: CicadaTopic~*;rocketTopic~*;
     consumeThreadMin: 20
     consumeThreadMax: 64
     # 设置一次消费消息的条数，默认为1条
@@ -29,6 +29,6 @@ rocketmq:
 
 # 配置 Group  Topic  Tag
 rocket:
-  group: rocketGroup
+#  group: rocketGroup
   topic: rocketTopic
   tag: rocketTag
