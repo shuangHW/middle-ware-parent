@@ -3,6 +3,7 @@ package com.rocket.queue.rocket;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
+import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -38,6 +39,7 @@ public class ConsumerConfig {
         consumer.registerMessageListener(msgListener);
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
         consumer.setConsumeMessageBatchMaxSize(consumeMessageBatchMaxSize);
+        consumer.setMessageModel(MessageModel.CLUSTERING);//默认为集群方式消费
         try {
             String[] topicTagsArr = topics.split(";");
             for (String topicTags : topicTagsArr) {
