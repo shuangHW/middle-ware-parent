@@ -32,7 +32,7 @@ mybatis-plus:
     banner: false
   #原生配置
   configuration:
-    map-underscore-to-camel-case: true
+      map-underscore-to-camel-case: true
     cache-enabled: false
     call-setters-on-nulls: true
-    jdbc-type-for-null: 'null'
+      jdbc-type-for-null: 'null'

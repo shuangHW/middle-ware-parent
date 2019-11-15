@@ -1,0 +1,16 @@
+.idea/
+*.iml
+ware-dubbo-parent/block-dubbo-common/target/
+ware-dubbo-parent/block-dubbo-consume/target/
+ware-dubbo-parent/block-dubbo-provider/target/
+ware-elastic-search/target/
+ware-email-send/target/
+ware-fast-dfs/target/
+ware-jwt-token/target/
+ware-quart-job/target/
+ware-redis-cluster/target/
+ware-rocket-queue/target/
+ware-security-auth/target/
+ware-shard-jdbc/target/
+ware-shiro-auth/target/
+ware-swagger-two/target/
